@@ -1,3 +1,3 @@
 ## Encriptador-Alura-Challenge 
-# Challenge Oracle One/
+# Challenge Oracle One
 # Autor: Pablo Palacios
