@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root{
+    /*paleta de colores*/
+    --bg-main: #F3F5FC;
+    --primary: #0A3871;
+    --white: #ffffff;
+    --gray: #71717A;
+    --gray-light: #D8DFE8;
+    --gray-strong: #343a40;
+    /*fuentes*/
+    --global-font: 'Inter', sans-serif;
+}
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-main);
+    font-size: 62.5%;
+}
+html *{
+    font-family: var(--global-font);
+}  
+body{
+      font-size: 1.6rem; /* 1 rem = 10px*/
+}
+header{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.display-none{
+    display: none;
+}
+
+
+.encript-container{
+    display: flex;
+    justify-content: center;
+    min-height: calc( 100vh - 58.39px - 91.95px);
+}
+
+.input-encript-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem;
+}
+.input-encript-container span{
+    color: var(--gray);
+    padding: 1rem;
+}
+.input-encript{
+    height: 100%;
+}
+.input-encript textarea{
+    width: 100%;
+    background-color: var(--bg-main);
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: var(--global-font);
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 500;
+    height: 100%;
+}
+.input-encript textarea::placeholder{
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.btn-encript-container{
+    margin: 0 auto;
+}
+.btn-encript-container button{
+    width: 30rem;
+}
+
+.btn-encript-container .btn-encriptador{
+    border: none;
+    padding: 2rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 3rem;
+}
+.btn-encript-container .btn-encriptador:hover{
+    background-color: var(--gray-light);
+    color: var(--primary);
+    font-weight: bold;
+    border: 0.2rem solid var(--primary);
+    cursor: pointer;
+}
+
+.btn-encript-container .btn-desencriptador{
+    padding: 2rem;
+    background-color: var(--gray-light);
+    color: var(--primary);
+    border-radius: 3rem;
+    border: 0.2rem solid var(--primary);
+}
+
+.btn-encript-container .btn-desencriptador:hover{
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.output-encript-container{
+    width: 20%;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 3rem;
+    display: flex;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.output-encript{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+.output-encript-text img{
+    width: 95%;
+}
+.output-encript-text p{
+    color: var(--gray-strong);
+    font-weight: bold;
+}
+
+.btn-copiar{
+    border: 0.1rem solid var(--primary);
+    padding: 1rem;
+    background-color: var(--gray-light);
+    color: var(--primary);
+    border-radius: 3rem;
+}
+
+.btn-copiar:hover{
+    border: 0.1rem solid var(--primary);
+    padding: 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.aviso-validacion{
+    position: absolute;
+    top: 33.33%;
+    left: 33.33%;
+    right: 33.33%;
+    bottom: 33.33%;
+    background-color: var(--white);
+    border-radius: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-strong);
+    font-weight: bold;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    padding: 1rem;
+}
+
+
+
+/*tabletas*/
+@media screen and (min-width:768px) and (max-width: 1280px){
+    .main-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(100%, 1fr));
+        justify-items:center;
+    }
+    .encript-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(100%, 1fr));
+        justify-items:center;
+        padding-top: 2rem;
+    }
+
+    .input-encript-container{
+        width: 100%;
+        padding: 0;
+    }
+
+    .btn-encript-container{
+        display: flex;
+        gap: 0.5rem;
+    }
+    .output-encript-container{
+        width: 90%;
+        margin-top: 2rem;
+    }
+
+
+    .output-encript-text img{
+        display: none;
+    }
+}
+@media screen and (max-width:767px) {
+    .encript-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        margin: 0 auto;
+    }
+    .input-encript-container{
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .input-encript-container form{
+        height: 15rem;
+    }
+
+    .btn-encript-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 0.5rem;
+    }
+
+    .output-encript-container{
+        margin: 1rem auto;
+        width: 70%;
+        padding: 2rem;
+    }
+
+    
+    .output-encript-text img{
+        display: none;
+    }
+}
